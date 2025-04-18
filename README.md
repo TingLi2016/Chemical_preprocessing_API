@@ -39,7 +39,7 @@ A containerized REST API for chemical SMILES, built with FastAPI. This API allow
 1. Clone the repository:
    ```bash
    git clone <repository-url>
-   cd chem-preprocessing
+   cd Chemical_preprocessing_API
    ```
 
 2. Install dependencies using uv:

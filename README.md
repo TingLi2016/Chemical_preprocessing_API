@@ -49,12 +49,12 @@ A containerized REST API for chemical SMILES, built with FastAPI. This API allow
 
 3. Run the backend:
    ```bash
-   uv run uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
+   uv run uvicorn app.main:app --host 0.0.0.0 --port 8008 --reload
    ```
 
 4. Run the frontend (in a separate terminal):
    ```bash
-   uv run streamlit run frontend.py -- --server.port=8501 --server.address=0.0.0.0
+   uv run streamlit run frontend.py -- --server.port=8502 --server.address=0.0.0.0
    ```
 
 5. Access the application:

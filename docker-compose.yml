@@ -1,0 +1,39 @@
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: backend
+    container_name: chemical-api-backend
+    ports:
+      - "8008:8008"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8008/"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 5s
+    networks:
+      - chemical-network
+    restart: unless-stopped
+
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: frontend
+    container_name: chemical-api-frontend
+    ports:
+      - "8502:8502"
+    environment:
+      - API_URL=http://backend:8008
+    depends_on:
+      backend:
+        condition: service_healthy
+    networks:
+      - chemical-network
+    restart: unless-stopped
+
+networks:
+  chemical-network:
+    driver: bridge

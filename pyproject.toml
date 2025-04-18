@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "chemical_preprocessing_api"
+version = "0.1.0"
+description = "Chemical Preprocessing API"
+requires-python = ">=3.10"
+dependencies = [
+    "pydantic",
+    "httpx",
+    "fastapi",
+    "uvicorn"
+]
+
+[project.optional-dependencies]
+frontend = [
+    "streamlit"
+]
+dev = [
+    "pytest",
+    "black",
+    "flake8",
+    "isort",
+    "pre-commit"
+]
+all = ["chemical_preprocessing_api[frontend,dev]"]
+
+[tool.black]
+line-length = 88
+
+[tool.setuptools]
+packages = ["app"]
+
+[tool.pytest.ini_options]
+markers = [
+    "frontend: mark tests related to the frontend module",
+]

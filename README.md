@@ -25,7 +25,7 @@ A containerized REST API for chemical SMILES, built with FastAPI. This API allow
 
 2. Build and run the containers:
    ```bash
-   docker-compose up -d
+   docker compose up -d
    ```
 
 3. Access the application:

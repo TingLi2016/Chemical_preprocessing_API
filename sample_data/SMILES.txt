@@ -1,0 +1,4 @@
+C1=CC=CC=C1[N+](=O)[O-],
+CC(=O)[O-].[Na+],
+O=C1C=CC(=O)C=C1,
+ClC(C(=O)[O-])N

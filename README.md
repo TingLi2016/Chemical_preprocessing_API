@@ -1,6 +1,6 @@
 # Chemical Preprocessing API
 
-A containerized REST API for chemical SMILES, built with FastAPI. This API allows users to upload SMILES and perform chemical cleaning and fingerprint generation. 
+A containerized REST API using FastAPI that processes chemical SMILES, enabling users to upload SMILES strings for cleaning and fingerprint generation.
 
 
 ## Features

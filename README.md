@@ -91,9 +91,9 @@ Using Docker:
 docker build --target test .
 ```
 
-Using uv:
+Using local:
 ```bash
-uv run pytest -v
+pytest tests/
 ```
 
 ### Project Structure
@@ -109,7 +109,7 @@ chemical_preprocessing_api/
 ├── frontend.py               # Streamlit frontend
 ├── Dockerfile                # Multi-stage Docker build
 ├── docker-compose.yml        # Docker Compose configuration
-└── environment.yml            # Conda environment file, made this special for RDKit package
+└── environment.yml           # Conda environment file, made this special for RDKit package
 └── pyproject.toml            # Project dependencies
 ```
 
@@ -118,7 +118,7 @@ chemical_preprocessing_api/
 ### Backend (FastAPI)
 - Built with FastAPI for high-performance API endpoints
 - Uses Pydantic for data validation
-- Implements chemical cleaning and fingerprint generation for SMILES
+- Implements chemical cleaning and fingerprint generation for received SMILES
 
 ### Frontend (Streamlit)
 - Built with Streamlit for rapid dashboard development

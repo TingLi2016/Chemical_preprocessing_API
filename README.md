@@ -42,19 +42,21 @@ A containerized REST API for chemical SMILES, built with FastAPI. This API allow
    cd Chemical_preprocessing_API
    ```
 
-2. Install dependencies using uv:
+2. Create Conda environment and install dependencies:
    ```bash
+   conda env create -f environment.yml
+   conda activate chem-preprocessing
    uv pip install -e ".[dev]"
    ```
 
 3. Run the backend:
    ```bash
-   uv run uvicorn app.main:app --host 0.0.0.0 --port 8008 --reload
+   uvicorn app.main:app --host 0.0.0.0 --port 8008 
    ```
 
 4. Run the frontend (in a separate terminal):
    ```bash
-   uv run streamlit run frontend.py -- --server.port=8502 --server.address=0.0.0.0
+   streamlit run frontend.py
    ```
 
 5. Access the application:

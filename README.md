@@ -86,12 +86,7 @@ A containerized REST API for chemical SMILES, built with FastAPI. This API allow
 
 ### Running Tests
 
-Using Docker:
-```bash
-docker build --target test .
-```
-
-Using local:
+Local:
 ```bash
 pytest tests/
 ```
